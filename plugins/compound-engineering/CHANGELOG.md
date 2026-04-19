@@ -9,6 +9,66 @@ All notable changes to the compound-engineering plugin will be documented in thi
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.0.0](https://github.com/roach88/claude-plugins/compare/compound-engineering-v2.68.1...compound-engineering-v3.0.0) (2026-04-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* **cli:** rename all skills and agents to consistent ce- prefix ([#503](https://github.com/roach88/claude-plugins/issues/503))
+* **claude-permissions-optimizer:** remove skill ([#578](https://github.com/roach88/claude-plugins/issues/578))
+
+### Features
+
+* **ce-debug:** add systematic debugging skill ([#543](https://github.com/roach88/claude-plugins/issues/543)) ([e38223a](https://github.com/roach88/claude-plugins/commit/e38223ae91921ebacabd10ff7cd1105ba3c10b25))
+* **ce-demo-reel:** add demo reel skill with Python capture pipeline ([#541](https://github.com/roach88/claude-plugins/issues/541)) ([b979143](https://github.com/roach88/claude-plugins/commit/b979143ad0460a985dd224e7f1858416d79551fb))
+* **ce-ideate:** mode-aware v2 ideation ([#588](https://github.com/roach88/claude-plugins/issues/588)) ([12aaad3](https://github.com/roach88/claude-plugins/commit/12aaad31ebd17686db1a75d1d3575da79d1dad2b))
+* **ce-optimize:** Auto-research loop for tuning system prompts / vector clustering / evaluating different code solution / etc ([#446](https://github.com/roach88/claude-plugins/issues/446)) ([8f20aa0](https://github.com/roach88/claude-plugins/commit/8f20aa0406a7cda4ff11da45b971e38681650678))
+* **ce-plan:** add output structure and scope sub-categorization ([#542](https://github.com/roach88/claude-plugins/issues/542)) ([f3cc754](https://github.com/roach88/claude-plugins/commit/f3cc7545e5eca0c3774b2803fa5515ff98a8fc1e))
+* **ce-polish-beta:** human-in-the-loop polish phase between /ce:review and merge ([#568](https://github.com/roach88/claude-plugins/issues/568)) ([070092d](https://github.com/roach88/claude-plugins/commit/070092d997bcc3306016e9258150d3071f017ef8))
+* **ce-pr-description:** focused skill for PR description generation ([#561](https://github.com/roach88/claude-plugins/issues/561)) ([8ec6d33](https://github.com/roach88/claude-plugins/commit/8ec6d339fee38cf4306e6586f726486cbae713b0))
+* **ce-release-notes:** add skill for browsing plugin release history ([#589](https://github.com/roach88/claude-plugins/issues/589)) ([59dbaef](https://github.com/roach88/claude-plugins/commit/59dbaef37607354d103113f05c13b731eecbb690))
+* **ce-review:** add per-finding judgment loop to Interactive mode ([#590](https://github.com/roach88/claude-plugins/issues/590)) ([27cbaf8](https://github.com/roach88/claude-plugins/commit/27cbaf8161af8aad3260b58d0d9de03d6180a66c))
+* **ce-setup:** unified setup skill with dependency management and config bootstrapping ([#345](https://github.com/roach88/claude-plugins/issues/345)) ([354dbb7](https://github.com/roach88/claude-plugins/commit/354dbb75828f0152f4cbbb3b50ce4511fa6710c7))
+* **ce-work-beta:** add beta Codex delegation mode ([#476](https://github.com/roach88/claude-plugins/issues/476)) ([31b0686](https://github.com/roach88/claude-plugins/commit/31b0686c2e88808381560314f10ce276c86e11e2))
+* **ce-work:** reduce token usage by extracting late-sequence references ([#540](https://github.com/roach88/claude-plugins/issues/540)) ([bb59547](https://github.com/roach88/claude-plugins/commit/bb59547a2efdd4e7213c149f51abd9c9a17016dd))
+* **proof, ce-brainstorm, ce-plan, ce-ideate:** HITL review-loop mode ([#580](https://github.com/roach88/claude-plugins/issues/580)) ([e7cf0ae](https://github.com/roach88/claude-plugins/commit/e7cf0ae9571e260a00db458dd8e2281c37f1ec8b))
+* **session-historian:** cross-platform session history agent and /ce-sessions skill ([#534](https://github.com/roach88/claude-plugins/issues/534)) ([3208ec7](https://github.com/roach88/claude-plugins/commit/3208ec71f8f2209abc76baf97e3967406755317d))
+* **slack-researcher:** add /ce-slack-research skill and improve agent ([#538](https://github.com/roach88/claude-plugins/issues/538)) ([042ee73](https://github.com/roach88/claude-plugins/commit/042ee732398d1f41b9b91953569a54e40303332d))
+
+
+### Bug Fixes
+
+* **ce-compound-refresh:** restore ce:compound hand-off ([#591](https://github.com/roach88/claude-plugins/issues/591)) ([821c69c](https://github.com/roach88/claude-plugins/commit/821c69c567269ed617c56d95564f7ba1d883f364))
+* **ce-compound, ce-compound-refresh:** use injected memory block ([#569](https://github.com/roach88/claude-plugins/issues/569)) ([0b3d4b2](https://github.com/roach88/claude-plugins/commit/0b3d4b283c8e3165931816607cf86017d8273bbe))
+* **ce-demo-reel:** two-stage upload for reviewable approval gate ([#546](https://github.com/roach88/claude-plugins/issues/546)) ([5454053](https://github.com/roach88/claude-plugins/commit/545405380dba78bc0efd35f7675e8c27d99bf8c9))
+* **ce-plan, ce-brainstorm:** reliable interactive handoff menus ([#575](https://github.com/roach88/claude-plugins/issues/575)) ([3d96c0f](https://github.com/roach88/claude-plugins/commit/3d96c0f074faf56fcdc835a0332e0f475dc8425f))
+* **ce-plan:** close escape hatches that let the skill abandon direct invocations ([#554](https://github.com/roach88/claude-plugins/issues/554)) ([e4d5f24](https://github.com/roach88/claude-plugins/commit/e4d5f241bd3945784905a32d7fb7ef9305c621e8))
+* **ce-plan:** close exit gates and honor user-named resources ([#597](https://github.com/roach88/claude-plugins/issues/597)) ([d8e87c1](https://github.com/roach88/claude-plugins/commit/d8e87c17907b53bead27c223c5f10c7e765d67d8))
+* **ce-plan:** run ambiguity gate before the non-software catch-all ([#598](https://github.com/roach88/claude-plugins/issues/598)) ([49249d7](https://github.com/roach88/claude-plugins/commit/49249d73170b64046a9a6ba38186d483f28047bd))
+* **ce-pr-description:** hand off PR body via temp file ([#581](https://github.com/roach88/claude-plugins/issues/581)) ([c89f18a](https://github.com/roach88/claude-plugins/commit/c89f18a1151aa289bcc293dc26ff49a011782c7b))
+* **ce-pr-description:** mark return block as hand-off ([#593](https://github.com/roach88/claude-plugins/issues/593)) ([cc78551](https://github.com/roach88/claude-plugins/commit/cc78551e7cac788d5e43efc835c040f696e5b936))
+* **ce-release-notes:** backtick-wrap `<skill-name>` token in description ([#603](https://github.com/roach88/claude-plugins/issues/603)) ([2aee4d4](https://github.com/roach88/claude-plugins/commit/2aee4d42031892e7937640a003d11fad82420944))
+* **ce-review:** always fetch base branch to prevent stale merge-base ([#544](https://github.com/roach88/claude-plugins/issues/544)) ([4e0ed2c](https://github.com/roach88/claude-plugins/commit/4e0ed2cc8ddadf6d5504210e1210728e6f7cc9aa))
+* **ce-update:** use correct marketplace name in cache path ([#566](https://github.com/roach88/claude-plugins/issues/566)) ([d8305dd](https://github.com/roach88/claude-plugins/commit/d8305dd159ebe9d89df9c4af5a7d0fb2b128801b))
+* **ce-work,ce-work-beta:** add safety checks for parallel subagent dispatch ([#557](https://github.com/roach88/claude-plugins/issues/557)) ([5cae4d1](https://github.com/roach88/claude-plugins/commit/5cae4d1dab212d7e438f0b081986e987c860d4d5))
+* **ce-work:** reject plan re-scoping into human-time phases ([#600](https://github.com/roach88/claude-plugins/issues/600)) ([b575e49](https://github.com/roach88/claude-plugins/commit/b575e49c291371b178775a2bd50dbb1cc16210f5))
+* **cleanup:** remove rclone, agent-browser, lint, and bug-reproduction-validator ([#545](https://github.com/roach88/claude-plugins/issues/545)) ([1372b2c](https://github.com/roach88/claude-plugins/commit/1372b2cffd06989dee8eb9df26d7c94ac30f032a))
+* **document-review, review:** restrict reviewer agents to read-only tools ([#553](https://github.com/roach88/claude-plugins/issues/553)) ([e45c435](https://github.com/roach88/claude-plugins/commit/e45c435b996f7c0bf5ae0e23c0ab95b3fbd9204c))
+* **git-commit-push-pr:** apply PR description after delegate hand-off ([#594](https://github.com/roach88/claude-plugins/issues/594)) ([1afd63c](https://github.com/roach88/claude-plugins/commit/1afd63cc764173368a30cbd92af704f5b7602e6d))
+* **git-commit-push-pr:** remove harness slug from badge table ([#539](https://github.com/roach88/claude-plugins/issues/539)) ([044a035](https://github.com/roach88/claude-plugins/commit/044a035e77298c4b8d2152ac2cba36fc00f5b99a))
+* **git-commit-push-pr:** rewrite descriptions as net result, not changelog ([#558](https://github.com/roach88/claude-plugins/issues/558)) ([a559903](https://github.com/roach88/claude-plugins/commit/a55990387d48fa7af598880746ff862cc8f10acd))
+* **resolve-pr-feedback:** unblock /loop scheduling ([#582](https://github.com/roach88/claude-plugins/issues/582)) ([4ccadcf](https://github.com/roach88/claude-plugins/commit/4ccadcfd3fb3a08666aa4c808a123500bb14ac46))
+
+
+### Miscellaneous Chores
+
+* **claude-permissions-optimizer:** remove skill ([#578](https://github.com/roach88/claude-plugins/issues/578)) ([1995e3d](https://github.com/roach88/claude-plugins/commit/1995e3d7907864130e5c1ce9cda2e531d81659cf))
+
+
+### Code Refactoring
+
+* **cli:** rename all skills and agents to consistent ce- prefix ([#503](https://github.com/roach88/claude-plugins/issues/503)) ([5c0ec91](https://github.com/roach88/claude-plugins/commit/5c0ec9137a7350534e32db91e8bad66f02693716))
+
 ## [2.68.1](https://github.com/EveryInc/compound-engineering-plugin/compare/compound-engineering-v2.68.0...compound-engineering-v2.68.1) (2026-04-18)
 
 

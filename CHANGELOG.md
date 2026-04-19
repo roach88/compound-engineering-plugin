@@ -1,5 +1,44 @@
 # Changelog
 
+## [3.0.0](https://github.com/roach88/claude-plugins/compare/cli-v2.68.1...cli-v3.0.0) (2026-04-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* **cli:** rename all skills and agents to consistent ce- prefix ([#503](https://github.com/roach88/claude-plugins/issues/503))
+* **claude-permissions-optimizer:** remove skill ([#578](https://github.com/roach88/claude-plugins/issues/578))
+
+### Features
+
+* **ce-demo-reel:** add demo reel skill with Python capture pipeline ([#541](https://github.com/roach88/claude-plugins/issues/541)) ([b979143](https://github.com/roach88/claude-plugins/commit/b979143ad0460a985dd224e7f1858416d79551fb))
+* **ce-ideate:** mode-aware v2 ideation ([#588](https://github.com/roach88/claude-plugins/issues/588)) ([12aaad3](https://github.com/roach88/claude-plugins/commit/12aaad31ebd17686db1a75d1d3575da79d1dad2b))
+* **ce-polish-beta:** human-in-the-loop polish phase between /ce:review and merge ([#568](https://github.com/roach88/claude-plugins/issues/568)) ([070092d](https://github.com/roach88/claude-plugins/commit/070092d997bcc3306016e9258150d3071f017ef8))
+* **ce-release-notes:** add skill for browsing plugin release history ([#589](https://github.com/roach88/claude-plugins/issues/589)) ([59dbaef](https://github.com/roach88/claude-plugins/commit/59dbaef37607354d103113f05c13b731eecbb690))
+* **ce-review:** add per-finding judgment loop to Interactive mode ([#590](https://github.com/roach88/claude-plugins/issues/590)) ([27cbaf8](https://github.com/roach88/claude-plugins/commit/27cbaf8161af8aad3260b58d0d9de03d6180a66c))
+* **ce-setup:** unified setup skill with dependency management and config bootstrapping ([#345](https://github.com/roach88/claude-plugins/issues/345)) ([354dbb7](https://github.com/roach88/claude-plugins/commit/354dbb75828f0152f4cbbb3b50ce4511fa6710c7))
+* **ce-work-beta:** add beta Codex delegation mode ([#476](https://github.com/roach88/claude-plugins/issues/476)) ([31b0686](https://github.com/roach88/claude-plugins/commit/31b0686c2e88808381560314f10ce276c86e11e2))
+* **ce-work:** reduce token usage by extracting late-sequence references ([#540](https://github.com/roach88/claude-plugins/issues/540)) ([bb59547](https://github.com/roach88/claude-plugins/commit/bb59547a2efdd4e7213c149f51abd9c9a17016dd))
+* **session-historian:** cross-platform session history agent and /ce-sessions skill ([#534](https://github.com/roach88/claude-plugins/issues/534)) ([3208ec7](https://github.com/roach88/claude-plugins/commit/3208ec71f8f2209abc76baf97e3967406755317d))
+
+
+### Bug Fixes
+
+* **ce-plan, ce-brainstorm:** reliable interactive handoff menus ([#575](https://github.com/roach88/claude-plugins/issues/575)) ([3d96c0f](https://github.com/roach88/claude-plugins/commit/3d96c0f074faf56fcdc835a0332e0f475dc8425f))
+* **ce-release-notes:** backtick-wrap `<skill-name>` token in description ([#603](https://github.com/roach88/claude-plugins/issues/603)) ([2aee4d4](https://github.com/roach88/claude-plugins/commit/2aee4d42031892e7937640a003d11fad82420944))
+* **converters:** preserve Codex agent sidecar scripts ([#563](https://github.com/roach88/claude-plugins/issues/563)) ([ee8e402](https://github.com/roach88/claude-plugins/commit/ee8e4028972252620f0dbfdbe1240204d22e6ea1))
+* **converters:** preserve Codex config on no-MCP install ([#564](https://github.com/roach88/claude-plugins/issues/564)) ([ed778e6](https://github.com/roach88/claude-plugins/commit/ed778e62f1e0e8621df94e5d461b20833cff33e2))
+* **openclaw:** use sync plugin registration ([#498](https://github.com/roach88/claude-plugins/issues/498)) ([2c05c43](https://github.com/roach88/claude-plugins/commit/2c05c43dc8b66ae37501e42a9747c07d82002185))
+
+
+### Miscellaneous Chores
+
+* **claude-permissions-optimizer:** remove skill ([#578](https://github.com/roach88/claude-plugins/issues/578)) ([1995e3d](https://github.com/roach88/claude-plugins/commit/1995e3d7907864130e5c1ce9cda2e531d81659cf))
+
+
+### Code Refactoring
+
+* **cli:** rename all skills and agents to consistent ce- prefix ([#503](https://github.com/roach88/claude-plugins/issues/503)) ([5c0ec91](https://github.com/roach88/claude-plugins/commit/5c0ec9137a7350534e32db91e8bad66f02693716))
+
 ## [2.68.1](https://github.com/EveryInc/compound-engineering-plugin/compare/cli-v2.68.0...cli-v2.68.1) (2026-04-18)
 
 
